@@ -2,20 +2,23 @@
 body, h1, h2, h3, ul, li, a {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 /* Estilização do header */
 header {
-    background-image: url(/assets/fundoBiblioteca.svg);
+    background-color: #957964;
     color: white;
     padding: 1rem 0;
     text-align: center;
 }
 
 header h1 {
+    margin-top: .5rem;
     margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 /* Estilização do menu */
