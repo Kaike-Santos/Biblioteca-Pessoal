@@ -8,7 +8,7 @@ body, h1, h2, h3, ul, li, a {
 
 /* Estilização do header */
 header {
-    background-color: #333;
+    background-image: url(/assets/fundoBiblioteca.svg);
     color: white;
     padding: 1rem 0;
     text-align: center;
