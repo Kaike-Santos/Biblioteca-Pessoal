@@ -1,4 +1,7 @@
 /* Reset básico */
+body{
+    background-color: #fffff4;
+}
 body, h1, h2, h3, ul, li, a {
     margin: 0;
     padding: 0;
@@ -9,16 +12,25 @@ body, h1, h2, h3, ul, li, a {
 
 /* Estilização do header */
 header {
-    background-color: #957964;
+    background-image: url(/imagens/fundoBiblioteca.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     color: white;
     padding: 1rem 0;
     text-align: center;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 header h1 {
     margin-top: .5rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    margin-right: 4.5rem;
 }
 
 /* Estilização do menu */
@@ -47,6 +59,7 @@ nav a:hover {
 /* Estilo do conteúdo principal */
 main {
     padding: 2rem;
+
 }
 
 /* Estilo para ocultar elementos */
@@ -130,4 +143,13 @@ main {
 
 .icon-btn.delete:hover {
     color: #b02130; /* Cor vermelha ao passar o mouse */
+}
+
+footer {
+    padding: 2rem;
+    background-color: #fffff4;
+}
+
+i{
+    margin-block: 2rem;
 }
