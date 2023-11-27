@@ -95,6 +95,7 @@ main {
 
 #bookPopup input[type="text"],
 #bookPopup input[type="date"],
+#bookPopup input[type="tel"],
 #bookPopup button {
     width: 100%;
     margin-bottom: 1rem;
@@ -152,4 +153,8 @@ footer {
 
 i{
     margin-block: 2rem;
+}
+
+main  p , footer p , #tituloa {
+    text-align: center;
 }
