@@ -96,7 +96,8 @@ main {
 #bookPopup input[type="text"],
 #bookPopup input[type="date"],
 #bookPopup input[type="tel"],
-#bookPopup button {
+#bookPopup button,
+#editora , #autor{
     width: 100%;
     margin-bottom: 1rem;
     padding: 0.5rem;

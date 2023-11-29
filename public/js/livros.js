@@ -11,9 +11,9 @@ function carregarAutores() {
       });
     })
     .catch(error => console.error("Erro ao carregar autores:", error));
-  }
+}
   
-  function carregarEditoras() {
+function carregarEditoras() {
     fetch("/api/editoras")
     .then(response => response.json())
     .then(editoras => {
@@ -26,7 +26,7 @@ function carregarAutores() {
       });
     })
     .catch(error => console.error("Erro ao carregar editoras:", error));
-  }
+}
 
 
 function displayLivros(livros) {

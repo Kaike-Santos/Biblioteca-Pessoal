@@ -13,7 +13,7 @@ function carregarAutores() {
     .catch(error => console.error("Erro ao carregar autores:", error));
   }
   
-function carregarEditoras() {
+  function carregarEditoras() {
     fetch("/api/editoras")
     .then(response => response.json())
     .then(editoras => {
@@ -32,21 +32,20 @@ function displayEditoras(editoras) {
     const tbody = document.getElementById("listaEditoras");
     tbody.innerHTML = ""; // Limpar a tabela
 
-    livros.forEach(editora => {
+    editoras.forEach(editora => {
         const row = tbody.insertRow();
 
         const nomeCell = row.insertCell(0);
         nomeCell.textContent = editora.nome;
 
-        const endereçoCell = row.insertCell(1);
-        endereçoCell.textContent = editora.endereço;
+        const enderecoCell = row.insertCell(1);
+        enderecoCell.textContent = editora.endereco;
 
         const telefoneCell = row.insertCell(2);
-        telefoneCell.textContent = editora.telefone;
+        telefoneCell.textContent = editora.telefone
 
         const actionsCell = row.insertCell(3);
-        actionsCell.innerHTML = `
-        <button class="icon-btn" onclick='editarEditora(${JSON.stringify(editora)})'>
+        actionsCell.innerHTML = `<button class="icon-btn" onclick='Editora(${JSON.stringify(editora)})'>
         <i class="fas fa-edit"></i> Editar
     </button>
     <button class="icon-btn" onclick="deleteEditora(${editora.id})">
@@ -81,9 +80,9 @@ function deleteEditora(id) {
 
 function editarEditora(editora) {
     const addBookBtn = document.getElementById("addBookBtn");
-    const nome = document.getElementById("titulo");
-    const endereco = document.getElementById("autor");
-    const telefone = document.getElementById("dataPublicacao");
+    const nome = document.getElementById("nome");
+    const endereco = document.getElementById("endereco");
+    const telefone = document.getElementById("telefone");
     const editoraId= document.getElementById("id_editora");
     nome.value = editora.nome;
     endereco.value = editora.endereco;
@@ -129,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function() {
         bookPopup.classList.remove("show");
         limparFormulario();
     });
-    
+
     // Adicionar novo livro ou atualizar um existente
     bookForm.addEventListener("submit", function(event) {
         event.preventDefault();
